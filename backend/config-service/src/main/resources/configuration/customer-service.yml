@@ -1,0 +1,12 @@
+server:
+  port: 8090
+
+data:
+  mongodb:
+    username: karima
+    password: karima
+    authentication-database: admin
+    database: customer
+    port: 27017
+    host: localhost
+
