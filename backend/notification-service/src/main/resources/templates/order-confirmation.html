@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8; /* Light gray-blue background */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark gray text */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #0056b3; /* Blue accent */
+        }
+
+        h1 {
+            color: #0056b3; /* Dark blue for headings */
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff; /* Blue header */
+            color: #ffffff; /* White text */
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa; /* Light gray for alternating rows */
+        }
+
+        tr:hover {
+            background-color: #e9ecef; /* Slightly darker gray on hover */
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555; /* Medium gray for footer */
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer span {
+            color: #0056b3; /* Accent blue for emphasis */
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Order Details</h1>
+    <p>Customer: <span th:text="${customerName}"></span></p>
+    <p>Order ID: <span th:text="${orderReference}"></span></p>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.quantity}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>Total Amount: $<span th:text="${totalAmount}"></span></p>
+        <p>This is an automated message. Please do not reply to this email.</p>
+        <p>Made by love in 2025 <span>lachheb</span>. All rights reserved.</p>
+    </div>
+</div>
+</body>
+
+</html>

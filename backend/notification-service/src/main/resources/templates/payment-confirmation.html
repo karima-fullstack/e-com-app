@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8; /* Light gray-blue background */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark gray text */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #0056b3; /* Blue accent */
+        }
+
+        h1 {
+            color: #0056b3; /* Dark blue heading */
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555; /* Medium gray text */
+            margin: 10px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            background-color: #007bff; /* Blue background */
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555; /* Medium gray for footer */
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer span {
+            color: #0056b3; /* Accent blue for emphasis */
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Payment Confirmation</h1>
+    <p>Dear <span th:text="${customerName}"></span>,</p>
+    <p>Your payment of $<span th:text="${amount}"></span> has been successfully processed.</p>
+    <p>Order reference: <span th:text="${orderReference}"></span></p>
+    <p>Thank you for choosing our service. If you have any questions, feel free to contact us.</p>
+
+    <a href="#" class="button">View Order Details</a>
+
+    <div class="footer">
+        <p>This is an automated message. Please do not reply to this email.</p>
+        <p>Made by love 2025 <span>lachheb</span>. All rights reserved.</p>
+    </div>
+</div>
+</body>
+
+</html>
