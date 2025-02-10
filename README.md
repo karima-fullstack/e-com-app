@@ -20,7 +20,7 @@ L'application est divisée en plusieurs microservices :
 - **Spring Cloud** (Config, Eureka, Gateway, OpenFeign)
 - **Kafka** (Communication asynchrone entre services)
 - **MongoDB** (Customer, Notification Service)
-- **PostgresSQL** (Product, Order, Payment Services)
+- **PostgreSQL** (Product, Order, Payment Services)
 - **JavaMailSender** (Envoi d'e-mails de confirmation)
 - **Docker** (Déploiement et gestion des services)
 
@@ -59,7 +59,7 @@ L'application est divisée en plusieurs microservices :
 - **Java 17**
 - **Docker & Docker Compose**
 - **Kafka & Zookeeper**
-- **PostgresSQL & MongoDB**
+- **PostgreSQL & MongoDB**
 
 ### Démarrage du projet
 1. Cloner le projet :
@@ -77,6 +77,9 @@ L'application est divisée en plusieurs microservices :
    ```
 4. Lancer les microservices :
    ```sh
+   mvn spring-boot:run -pl config-service
+   mvn spring-boot:run -pl discovery-service
+   mvn spring-boot:run -pl gateway-service
    mvn spring-boot:run -pl customer-service
    mvn spring-boot:run -pl product-service
    mvn spring-boot:run -pl order-service
