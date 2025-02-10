@@ -71,9 +71,9 @@ L'application est divisée en plusieurs microservices :
    ```sh
    docker-compose up -d zookeeper kafka
    ```
-3. Démarrer les bases de données **MySQL** et **MongoDB** :
+3. Démarrer les bases de données **PostgresSQL** et **MongoDB** :
    ```sh
-   docker-compose up -d mysql mongodb
+   docker-compose up -d postgres mongodb
    ```
 4. Lancer les microservices :
    ```sh
