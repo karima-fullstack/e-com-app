@@ -16,11 +16,11 @@ L'application est divisée en plusieurs microservices :
 - **Gateway-Service** : API Gateway pour la gestion des requêtes.
 
 ## Technologies utilisées
-- **Spring Boot** (REST, Security, Data JPA)
+- **Spring Boot** (REST, Data JPA, Lombok, Validation, Logging)
 - **Spring Cloud** (Config, Eureka, Gateway, OpenFeign)
 - **Kafka** (Communication asynchrone entre services)
 - **MongoDB** (Notification Service)
-- **MySQL** (Customer, Product, Order, Payment Services)
+- **PostgresSQL** (Customer, Product, Order, Payment Services)
 - **JavaMailSender** (Envoi d'e-mails de confirmation)
 - **Docker** (Déploiement et gestion des services)
 
