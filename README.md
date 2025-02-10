@@ -19,8 +19,8 @@ L'application est divisée en plusieurs microservices :
 - **Spring Boot** (REST, Data JPA, Lombok, Validation, Logging)
 - **Spring Cloud** (Config, Eureka, Gateway, OpenFeign)
 - **Kafka** (Communication asynchrone entre services)
-- **MongoDB** (Notification Service)
-- **PostgresSQL** (Customer, Product, Order, Payment Services)
+- **MongoDB** (Customer, Notification Service)
+- **PostgresSQL** (Product, Order, Payment Services)
 - **JavaMailSender** (Envoi d'e-mails de confirmation)
 - **Docker** (Déploiement et gestion des services)
 
@@ -37,7 +37,7 @@ L'application est divisée en plusieurs microservices :
 - Association d'une adresse à un client.
 
 ### Product Service
-- Ajout et gestion des produits.
+- Gestion des produits.
 - Gestion des catégories de produits.
 
 ### Order Service
@@ -59,7 +59,7 @@ L'application est divisée en plusieurs microservices :
 - **Java 17**
 - **Docker & Docker Compose**
 - **Kafka & Zookeeper**
-- **MySQL & MongoDB**
+- **PostgresSQL & MongoDB**
 
 ### Démarrage du projet
 1. Cloner le projet :
